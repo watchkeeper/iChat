@@ -1,0 +1,44 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "description": "the chat room like wechat called ichat or webjj",
+  "main": "index.js",
+  "scripts": {
+    "test": "webpack-dev-server --inline --hot --color",
+    "build": "webpack -d -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watchkeeper/iChat.git"
+  },
+  "keywords": [
+    "chat",
+    "room",
+    "skill",
+    "learn"
+  ],
+  "author": "modle_sherlock and Ronnie Rui",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/watchkeeper/iChat/issues"
+  },
+  "homepage": "https://github.com/watchkeeper/iChat#readme",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "css-loader": "^0.26.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.3",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "vue": "^2.1.3",
+    "vue-router": "^2.0.3"
+  }
+}
