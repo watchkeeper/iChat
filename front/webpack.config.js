@@ -52,7 +52,8 @@ module.exports = {
 		root:root,
 		extension:['less','js'],
 		alias:{
-			style:path.resolve(root,'src/less/index.less')
+			style:path.resolve(root,'src/less/index.less'),
+			'vue$': 'vue/dist/vue.common.js'
 		}
 	}
 }

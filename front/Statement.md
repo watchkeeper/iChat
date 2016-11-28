@@ -5,6 +5,8 @@ tool:
 
 develope command:
 	(1) npm test
+build command
+	(1)npm run build
 
 
 point：
@@ -33,3 +35,11 @@ point：
 			中的pulicPath,直接就是编译后的文件名
 	**vue:
 		【1】这种es6架构有问题，如此架构不号，但是面临不是很熟悉的问题，先用普通的，熟悉哈，再采用装逼架构
+		【2】什么架构都有问题沃日妈批 2.0 版本简直坑，是有一个StandAlone 和 runtimeOnly build。 webpack属于
+			后者，不带有模板编译器，前者有。
+		【3】在es6的协同中，Vue使用VueRouter需要有一句  Vue.use(VueRouter)才使得<router-view></router-view>生效
+		【4】router-view中有id,template中的最外层被影射为router-view中的id,否则使用template最外层的
+		【5】router-view设定了name,则意思为在匹配时候必须在components[默认是component]输入名字来匹配模板,routes中的name是为了router-link中的:to链接而设定的
+		【6】vue的字模板的props的属性的得到,还是this.propsName,但是，仅仅是mehods和computed中可以，data中就是undefined
+		【7】computed里面申明的是没有有的data属性，否则会报错，监听属性变化而触发运算
+	**接口记录:
