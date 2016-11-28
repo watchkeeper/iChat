@@ -31,3 +31,5 @@ point：
 			‘babel-core' , 麻批简直乱报，现在仅仅安装babel-core就行了哦，babel被替代了
 		【2】webpack-dev-server的index.html指向的entry要对我日麻批，是虚拟的编辑文件，若是没有指定配置文件
 			中的pulicPath,直接就是编译后的文件名
+	**vue:
+		【1】这种es6架构有问题，如此架构不号，但是面临不是很熟悉的问题，先用普通的，熟悉哈，再采用装逼架构
