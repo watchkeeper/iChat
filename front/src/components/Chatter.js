@@ -10,21 +10,21 @@ const tpl = ()=>(
 						<img :src='photo'>
 					</div>
 					<article>
-						<p>
-							<span>nickname</span>
-							<span>time</span>
+						<p style="padding-top:5px">
+							<span>某言</span>
+							<span>20:20</span>
 						</p>
-						<p>
-							<span>this is recent msg</span>
+						<p style="padding-bottom:5px">
+							<span>this is recent</span>
 							<span>flag</span>
 						</p>
 					</article>
 				</li>
 			</ul>
 			<div id='chat'>
-				<p>
-					<span>nickname</span>
-					<span>pull down</span>
+				<p id='header'>
+					<span>nickname</span>&emsp;
+					<span class='down-icon'></span>
 				</p>
 				<div id='chat_box'>
 					<p class='self_talk'>
@@ -40,15 +40,17 @@ const tpl = ()=>(
 						</div>
 					</p>
 				</div>
-				<div id='toolbar'>
-					<span>表情</span>
-					<span>文件</span>
-					<span>语音</span>
+				<div id='footer'>
+					<div id='toolbar'>
+						<span>表情</span>
+						<span>文件</span>
+						<span>语音</span>
+					</div>
+					<textarea id='input_box'></textarea>
+					<p id='send'>
+						Ctrl+Enter换行&emsp;<button type='button' id='post'>发送</button>
+					</p>
 				</div>
-				<textarea id='input_box'></textarea>
-				<p>
-					<button type='button' id='post'>发送</button>
-				</p>
 			</div>
 		</div>
 	`

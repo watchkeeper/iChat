@@ -28,6 +28,7 @@ point：
 			.modle{color:'red'}   	.fairy,.modle{width:30px}
 		【2】@import (less[more choice]) 'path'  导入外部的文件作为less使用不管是什么后缀
 		【3】麻批的less里面配合webpack用@import报错,待研究
+		【4】cacl()的百分数是相对于元素自身我擦你妹,不是父元素
 	**webpack:
 		【1】麻批的被坑了半天，忘记文件目录安装webpack-dev-server我日麻批，一直报鸡毛的babel has moved to 
 			‘babel-core' , 麻批简直乱报，现在仅仅安装babel-core就行了哦，babel被替代了
