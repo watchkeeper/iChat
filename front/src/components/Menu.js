@@ -19,9 +19,24 @@ const tpl = ()=>(
 				<div>
 					<img :src='userMsg.photo'  @click="jump">
 				</div>
-				<router-link :to="{name:'chatter'}" class='public_link' id='chat'></router-link>
-				<router-link :to="{name:'collection'}" class='public_link' id='collect'></router-link>
-				<router-link :to="{name:'contacts'}" class='public_link' id='contact'></router-link>
+				<router-link 
+					:to="{name:'chatter'}" 
+					class='public_link' id='chat' 
+					:style="init_light=='chatter'?light_chat:''" 
+				>
+				</router-link>
+				<router-link 
+					:to="{name:'collection'}" 
+					class='public_link' id='collect' 
+					:style="init_light=='collection'?light_collect:''" 
+					>
+				</router-link>
+				<router-link 
+					:to="{name:'contacts'}" 
+					class='public_link' id='contact' 
+					:style="init_light=='contacts'?light_contact:''" 
+					>
+				</router-link>
 			</div>
 			<a href='javascript:void(0)' class='public_link' id='setting'></a>
 		</nav>
@@ -39,15 +54,28 @@ export const Menu = {
 			/*man is one women is zero*/
 			sex:0
 		},
-		showOrNotIn:false
+		showOrNotIn:false,
+		init_light:'',
+		light_chat:{
+			"background-position-y":"-2500px"
+		},
+		light_collect:{
+			"background-position-y":"-2610px"	
+		},
+		light_contact:{
+			"background-position-y":"-2720px"	
+		},
+
 	}),
 	computed:{
-
+		init_light(){
+			return this.$route.name
+		}
 	},
 	methods:{
 		jump(){
 			this.showOrNotIn = !this.showOrNotIn
-
 		}
 	}
+
 }
