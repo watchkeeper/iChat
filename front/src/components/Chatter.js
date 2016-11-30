@@ -27,18 +27,43 @@ const tpl = ()=>(
 					<span class='down-icon'></span>
 				</p>
 				<div id='chat_box'>
-					<p class='self_talk'>
-						<div>
-							<img  src=''>
-							<div class='language'></div>
+					<div class='self_talk talk'>
+						<div class='language'>为你我愿意为你,流浪到天际我愿我愿意为你为你我流浪到天际我愿我愿意为你为你我流浪到天际我愿我愿意为你为你我,</div>
+						<div class='figure'>
+							<img  :src='photo'>
 						</div>
-					</p>
-					<p class='other_talk'>
-						<div>
-							<img  src=''>
-							<div class='language'></div>
+					</div>
+					<div class='other_talk talk'>
+						<div class='figure'>
+							<img  :src='photo'>
 						</div>
-					</p>
+						<div class='language'>我愿意为你,流浪到天际我愿意为你,流浪到天际我愿意为你,流浪到天际我愿意为你,流浪到天际</div>
+					</div>
+
+					<div class='self_talk talk'>
+						<div class='language'>为你我愿意为你,流浪到天际我愿我愿意为你为你我流浪到天际我愿我愿意为你为你我流浪到天际我愿我愿意为你为你我,</div>
+						<div class='figure'>
+							<img  :src='photo'>
+						</div>
+					</div>
+					<div class='other_talk talk'>
+						<div class='figure'>
+							<img  :src='photo'>
+						</div>
+						<div class='language'>我愿意为你,流浪到天际我愿意为你,流浪到天际我愿意为你,流浪到天际我愿意为你,流浪到天际</div>
+					</div>
+					<div class='other_talk talk'>
+						<div class='figure'>
+							<img  :src='photo'>
+						</div>
+						<div class='language'>我愿意为你,流浪到天际我愿意为你,流浪到天际我愿意为你,流浪到天际我愿意为你,流浪到天际</div>
+					</div>
+					<div class='self_talk talk'>
+						<div class='language'>为你我愿意为你,流浪到天际我愿我愿意为你为你我流浪到天际我愿我愿意为你为你我流浪到天际我愿我愿意为你为你我,</div>
+						<div class='figure'>
+							<img  :src='photo'>
+						</div>
+					</div>
 				</div>
 				<div id='footer'>
 					<div id='toolbar'>
