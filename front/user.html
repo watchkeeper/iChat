@@ -60,7 +60,7 @@
 	</div>
 
 	<template id="loginTpl">
-		<div>
+		<div @keyup.enter='login'>
 			<input type="text" v-model="username" placeholder="请输入用户名"></input>
 			<input type="password" v-model="password" placeholder="请输入密码"></input>
 			<strong :style="tip" v-show="identify">{{state}}</strong>
@@ -69,13 +69,13 @@
 		</div>
 	</template>
 	<template id="registerTpl">
-		<div>
+		<div @keyup.enter='sign_in'>
 			<input type="text" v-model="username" placeholder="请输入用户名"></input>
 			<input type="password" v-model="password" placeholder="请输入密码"></input>
 			<input type="password" v-model="rpassword" placeholder="请重复密码"></input>
 			<strong :style="tip" v-show="identify">{{state}}</strong>
 			<router-link :to="{name:'login_link'}" class='link'>去登陆</router-link>
-			<button type="button" @click='sign_in'>注册</button>
+			<button type="button" @click='sign_in' >注册</button>
 		</div>
 	</template>
 	

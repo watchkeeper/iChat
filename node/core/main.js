@@ -50,9 +50,9 @@ main.login = (req,res,next)=>{
 			}else{
 				delete data.password
 				const client_store = data
-				//cookie不能跨域,前台访问后台本来就是跨域的
-				// req.session.user = data
-				// res.cookie('user',JSON.stringify(client_store))
+				//cookie不能跨域,前台访问后台本来就是跨域的,得不到
+				req.session.user = data
+				res.cookie('user',JSON.stringify(client_store))
 				res.send({code:0,msg:'验证成功',user:client_store})
 			}
 		}

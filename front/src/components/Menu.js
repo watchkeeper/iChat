@@ -9,15 +9,15 @@ const tpl = ()=>(
 							{{userMsg.sex?'male':'female'}}
 						</span>
 					</figcaption>
-					<div><img :src='userMsg.photo'></div>
+					<div><img :src='userMsg.photo' ></div>
 					<p>{{userMsg.state}}</p>
-					<p>iChat ID : 0525forever</p>
+					<p>iChat ID : {{userMsg.webjj}}</p>
 					<p><button type='button' id='btn'>发消息</button></p>
 				</figure>
 			</div>
 			<div id='top'>
 				<div>
-					<img :src='userMsg.photo'  @click="jump">
+					<img :src='userMsg.photo'  @click="jump" :_id="userMsg._id">
 				</div>
 				<router-link 
 					:to="{name:'chatter'}" 
@@ -48,11 +48,13 @@ export const Menu = {
 	props:[""],
 	data:()=>({
 		userMsg:{
-			photo:'/img/photo.jpg',
-			state:'Just hope, It is hope',
-			name:"your watch keeper",
+			photo:'',
+			state:'',
+			name:'',
 			/*man is one women is zero*/
-			sex:0
+			sex:0,
+			webjj:'',
+			_id:''
 		},
 		showOrNotIn:false,
 		init_light:'',
@@ -67,6 +69,9 @@ export const Menu = {
 		},
 
 	}),
+	created(){
+		this.get_init_data()
+	},
 	computed:{
 		init_light(){
 			return this.$route.name
@@ -76,6 +81,16 @@ export const Menu = {
 		jump(){
 			console.info(this.$route)
 			this.showOrNotIn = !this.showOrNotIn
+		},
+		get_init_data(){
+			const user = JSON.parse(sessionStorage.user)
+			// console.info(user)
+			this.userMsg.photo = user.photo
+			this.userMsg.state = user.saying
+			this.userMsg.sex = user.sex
+			this.userMsg.name = user.nickname
+			this.userMsg.webjj = user.webjj
+			this.userMsg._id = user._id
 		}
 	}
 
