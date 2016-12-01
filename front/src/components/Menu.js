@@ -74,6 +74,7 @@ export const Menu = {
 	},
 	methods:{
 		jump(){
+			console.info(this.$route)
 			this.showOrNotIn = !this.showOrNotIn
 		}
 	}

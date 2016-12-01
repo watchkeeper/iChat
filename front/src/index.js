@@ -1,3 +1,8 @@
+if(!sessionStorage.user){
+	alert('用户信息不存在,请重新登陆!')
+	window.location.href = 'http://localhost:8989/user.html#/login'
+}
+
 import 'style'
 /*must set in webpack.config.js*/
 import Vue from 'vue'
@@ -6,6 +11,7 @@ import {Chatter} from './components/Chatter.js'
 import {Menu} from './components/Menu.js'
 import {Contacts} from './components/Contacts.js'
 import {Collection} from './components/Collection.js'
+
 
 /*here*/
 Vue.use(VueRouter)
