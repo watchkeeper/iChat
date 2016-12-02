@@ -70,5 +70,24 @@ main.check_username_url = (req,res)=>{
 	})
 }
 
+main.get_list = (req,res)=>{
+	const params = req.query
+	mongo.findOne('users',{webjj:`${params.webjj}`},{password:0})
+	.then((data)=>{
+		//传来正在使用者webjj然后查到正在使用的信息
+		console.log(data)
+		return data
+	})
+	.then((data)=>{
+		//将值传递到这儿,查其朋友并且拼接成数组
+		const query_arr = Array.from(data.friends).map(value=>value.webjj)
+		mongo.find('users',{webjj:{$in:query_arr}})
+		.then((msg)=>{
+			msg.unshift(data)
+			res.send({code:0,data:msg})
+		})
+	})
+}
+
 
 module.exports = main

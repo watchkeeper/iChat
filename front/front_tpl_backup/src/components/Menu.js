@@ -17,7 +17,7 @@ const tpl = ()=>(
 			</div>
 			<div id='top'>
 				<div>
-					<img :src='userMsg.photo'  @click="jump" :_id="userMsg.webjj">
+					<img :src='userMsg.photo'  @click="jump" :_id="userMsg._id">
 				</div>
 				<router-link 
 					:to="{name:'chatter'}" 
@@ -48,12 +48,13 @@ export const Menu = {
 	props:[""],
 	data:()=>({
 		userMsg:{
-			photo:null,
-			state:null,
-			name:null,
+			photo:'',
+			state:'',
+			name:'',
 			/*man is one women is zero*/
-			sex:null,
-			webjj:null
+			sex:0,
+			webjj:'',
+			_id:''
 		},
 		showOrNotIn:false,
 		init_light:'',
@@ -89,6 +90,7 @@ export const Menu = {
 			this.userMsg.sex = user.sex
 			this.userMsg.name = user.nickname
 			this.userMsg.webjj = user.webjj
+			this.userMsg._id = user._id
 		}
 	}
 

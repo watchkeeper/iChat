@@ -1,0 +1,12 @@
+.bg(@url:black,@fix:contain){
+	background:@url center center no-repeat;
+	background-size:@fix;
+}
+.size(@width:auto,@height:auto){
+	width:@width;
+	height:@height;
+}
+.edge(@width:1px,@style:solid,@color:black){
+	border:@width @style @color
+}
+//麻批的less里面配合webpack用@import报错,待研究

@@ -151,7 +151,7 @@
 					post_data(
 						server_msg.node_io.login_url,
 						{username:this.username,password:this.password}
-					).done(function(msg){
+					).done((msg)=>{
 						sessionStorage.user = JSON.stringify(msg.user)
 						alert(msg.msg)
 						if(msg.code==0){
@@ -199,12 +199,12 @@
 					post_data(
 						server_msg.node_io.check_username_url,
 						{username:this.username}
-					).done(function(info){
+					).done((info)=>{
 						if(info.code==0){
 							post_data(
 								server_msg.node_io.register_url,
 								{username:this.username,password:this.password}
-							).done(function(msg){
+							).done((msg)=>{
 								// console.info('get server reply data :')
 								// console.info(msg)
 								/*这儿的this不在指向组件了*/

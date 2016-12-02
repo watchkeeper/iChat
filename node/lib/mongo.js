@@ -55,13 +55,13 @@ const findOne = (collection,query,fields)=>{
 	return p
 }
 
-// find('test',{name:'wuruijie'})
+// find('test',{name:'wuruijie'}) 其中 wuruijie还可以是数组  select in
 const find = (collection,query)=>{
 	const p = new Promise((resolve,reject)=>{
 		mc.connect(url,(err,db)=>{
 			assert.ok(!err)
 			const col = db.collection(collection)
-			col.find({}).toArray((err,result)=>{
+			col.find(query).toArray((err,result)=>{
 				assert.ok(!err)
 				// console.log(result)
 				resolve(result)

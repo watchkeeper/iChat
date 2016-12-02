@@ -31,6 +31,9 @@ app.use(session({
 	saveUninitialized:false
 }))
 
+const io = require('./core/io')
+io.reflect(chat_server)
+
 const router = require('./router')
 router.reflect(app)
 

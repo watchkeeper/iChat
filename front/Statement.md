@@ -69,10 +69,14 @@ point：
 				this.getData()
 			}
 		【18】vue的改变对象渲染,直接改变就行了,仅仅是数组需要用pop slice等来才能重新渲染,对象嘛,你想,
-			字符串也是对象啊
+			字符串也是对象啊,还能直接赋值给方便!
+		【19】指令：将数据的变化影射到dom的行为：比如：v-show
+		【20】渲染html字符上模板用v-html=“”，{{{}}} vue2不行啦哇
+		【21】再要嵌套一层的时候，不要用块级元素，用span p之类不会有什么问题
 
 	**node
 		【1】node express的中间件就是吧请求层层处理封装在继续传递,或者返回,原本node的服务器是裸机的,比如cookie,也是中间件来分装的,res的数据请求,也是中间件来封装了才可以用的也就是说它是一个变动又随和的服务器,可以自己层层包装,我也可以
+		【2】mongodb库的查询的方法，和源码mongodb差不多比如find的  db.col.find({hello:{$in:[]}})
 	**other
 		【1】"Access-Control-Allow-Origin":"*"时候，jquery中的xhrFields：{withCredientials:false},要写成false,fuck!,反正老子实践了是这样的
 	**接口记录:

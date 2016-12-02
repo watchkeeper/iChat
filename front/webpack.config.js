@@ -55,5 +55,8 @@ module.exports = {
 			style:path.resolve(root,'src/less/index.less'),
 			'vue$': 'vue/dist/vue.common.js'
 		}
+	},
+	externals:{
+		io:"window.io"
 	}
 }
